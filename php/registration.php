@@ -4,16 +4,9 @@
 <meta charset="utf-8">
 <title>Sign Up</title>
 <link rel="stylesheet" href="../css/style.css" />
+
 </head>
 <body>
-</header>
-    <nav>
-        <a href="../index.php">Home</a>
-        <a href="">About Us</a>
-        <a href="../php/registration.php">Become a Member</a>
-        <a href="">Shopping cart</a>
-      </nav>        
-</header>
 
 <?php
 require('db.php');
@@ -60,10 +53,15 @@ VALUES ('$name' , '$phone' , '$address' , '$email' , '".md5($password)."' , '$us
 <input type="password" name="password" placeholder="Password" required />
 <input type="text" name="phone" placeholder="Contact Number" required />
 <input type="text" name="address" placeholder="Shipping Address" required />
-<input type="submit" name="submit" value="Register" />
+<input type="submit" name="submit" value="             Register            " />
 </form>
 <p>Already a Member? <a href='../php/login.php'>Log In Here</a></p>
 </div>
+<div class="form">
+<a href= "../index.php" ><input type="submit" name="" value="    Back to Home Page    " /></a>
+
+</form>
+
 <?php } ?>
 </body>
 </html>

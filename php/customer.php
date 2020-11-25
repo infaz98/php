@@ -14,25 +14,29 @@ class Customer	 {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>	
  <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/itemPage.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">PetRuff</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Log Out</a></li>
-    </ul>
-  </div>
-</nav>
+    
+    <header>
+
+        <nav>
+            <a href="../index.php">Home</a>
+            <a href="">About Us</a>
+            <a href="">Profile</a>
+            <a href="../php/logout.php">Log Out</a>
+        </nav>
+    </header>
+
+
+
+<br>
+<br>
+
+<div>
+<h4>Welcome <?php session_start(); echo $_SESSION['username']; ?>!</h4>
+</div>
     </body>
 </html>
 

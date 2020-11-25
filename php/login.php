@@ -52,6 +52,11 @@ if (isset($_POST['username'])){
 	</form>
 	<p>Not registered yet? <a href='registration.php'>Register Here</a></p>
 	</div>
+	<div class="form">
+<a href= "../index.php" ><input type="submit" name="" value="    Back to Home Page    " /></a>
+
+</form>
+
 	<?php } 
 ?>
 </body>

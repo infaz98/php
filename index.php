@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Ruff</title>
 
-    	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/index.css">
 
 </head>
 <body>
-    
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">PetRuff</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Log Out</a></li>
-    </ul>
-  </div>
-</nav>
+    <header>
 
-    <header>   
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="">About Us</a>
+
+        <?php
+        	session_start();
+        	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    			
+    		echo "  <a href = '../php/customer.php' >Hello ". $_SESSION['username'] . "   </a>";
+    		
+    	} else {
+    		echo "<a href='../php/registration.php'> Become a Member</a>";
+	}      
+	?>
+	
+        <a href="">Shopping cart</a>
+    </nav>
+
         <div>
             <h1>Pet Ruff</h1>
-            <h2>Your pets' favourite place, One stop for everything</h2>
+            <h2>Your pets' favourite place</h2>
         </div>
         
      </header>
@@ -40,7 +41,7 @@
 
      <section>
         <div class="container">
-            <h3>Best place for all your pets needs, One stop for everything</h3>
+            <h3>Best place for all your pets needs</h3>
             <p>
                 All your pet need from food to health care for every need we bring the best quality products and service to your fingertip.
             </p>
